@@ -1,0 +1,13 @@
+cache:
+  CACHE_TYPE: simple
+app:
+  SALT: bar
+  ENV: dev
+  SECRET: ^753*&FdFS#4D
+  HOST: 127.0.0.1
+  PORT: 5000
+jwt:
+  SECRET: foo
+  EXPIRE_HOURS: 24
+db:
+  MYSQL: mysql+pymysql://
