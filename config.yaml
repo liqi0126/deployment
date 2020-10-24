@@ -10,4 +10,5 @@ jwt:
   SECRET: foo
   EXPIRE_HOURS: 24
 db:
-  MYSQL: mysql+pymysql://thss:H0lc2FaAm30zV9r2@bj-cdb-jh34xs8y.sql.tencentcdb.com:62554/simplebbs?charset=utf8mb4
+#  MYSQL: mysql+pymysql://thss:H0lc2FaAm30zV9r2@bj-cdb-jh34xs8y.sql.tencentcdb.com:62554/simplebbs?charset=utf8mb4
+  MYSQL: mysql+pymysql://root:2017010256@db:3306/thss?charset=utf8mb4

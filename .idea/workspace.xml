@@ -2,38 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="463dd5e4-d7d2-4118-a3df-596bfa69bcad" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../../../../../Computer_Networks/projects/Project1/2019-UDP-FTP" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../Computer_Networks/projects/Project1/2019-UDP-FTP" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../../Introduction_to_Internet_of_things/homework/HW2/T1.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../../Introduction_to_Internet_of_things/homework/HW2/T2.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../../Introduction_to_Internet_of_things/homework/HW2/T3.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../../Introduction_to_Internet_of_things/homework/HW2/T4.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../../Introduction_to_Internet_of_things/homework/HW2/fft_plot.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../../Introduction_to_Internet_of_things/homework/HW2/func1.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../../Introduction_to_Internet_of_things/homework/HW2/func2.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../../Introduction_to_Internet_of_things/homework/HW2/func3.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../hw1/lost_photos/WechatIMG1447.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../hw1/lost_photos/WechatIMG292.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../hw1/lost_photos/WechatIMG293.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../hw1/lost_photos/WechatIMG294.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../hw1/lost_photos/WechatIMG295.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../hw1/lost_photos/WechatIMG296.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../hw1/lost_photos/WechatIMG297.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../hw1/lost_photos/WechatIMG298.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../hw1/lost_photos/WechatIMG299.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../hw1/lost_photos/WechatIMG300.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../hw1/lost_photos/WechatIMG301.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../hw1/lost_photos/WechatIMG302.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../hw1/lost_photos/WechatIMG303.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../hw1/lost_photos/WechatIMG304.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../hw1/lost_photos/WechatIMG305.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../hw1/lost_photos/WechatIMG306.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../hw1/user_store_map 2.drawio" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../hw1/user_store_map.drawio" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../hw1/user_store_map.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../hw1/用户调研与需求故事.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../hw1/紫荆寻物_final.pptx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../hw2/05_开发团队章程示例.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../hw2/单元测试&amp;应用部署.pdf" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/.env_example" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/nginx/app.conf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -41,42 +17,27 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../../.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="970" />
-    <option name="y" value="322" />
-    <option name="width" value="1145" />
-    <option name="height" value="1039" />
-  </component>
+  <component name="ProjectId" id="1jIrKbic5UfpeGeSSuAPuFhejNe" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="code" type="b2602c69:ProjectViewProjectNode" />
-              <item name="code" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="code" type="b2602c69:ProjectViewProjectNode" />
-              <item name="code" type="462c0819:PsiDirectoryNode" />
-              <item name="application" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-    </panes>
-  </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -100,29 +61,22 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1603414844232</updated>
+      <workItem from="1603502385863" duration="6053000" />
     </task>
     <servers />
   </component>
-  <component name="ToolWindowManager">
-    <frame x="776" y="258" width="916" height="831" extended-state="0" />
-    <layout>
-      <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Python Console" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-    </layout>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

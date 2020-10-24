@@ -7,3 +7,4 @@ flask_script
 flask_migrate
 python-dotenv
 pyyaml
+gunicorn
