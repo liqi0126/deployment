@@ -1,0 +1,62 @@
+version: "3"
+services:
+  app:
+    container_name: 'app'
+    restart: always
+    build: .
+    command: >
+      bash -c
+      "python3 manage.py database migrate &&
+       python3 manage.py database upgrade &&
+       gunicorn -w4 -b 0.0.0.0:5000 --log-level=debug --access-logfile error.log manage:app"
+    volumes:
+      - .:/code
+      - static-volume:/code/application/static
+      - template-volume:/code/application/templates
+    expose:
+      - "5000"
+    depends_on:
+      - db
+    networks:
+      - web_network
+      - db_network
+  db:
+    container_name: 'mysql'
+    image: mysql:5.7
+    volumes:
+       - "/home/ubuntu/mysql:/var/lib/mysql"
+    env_file: .env
+    expose:
+      - "3306"
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=${PASSWORD}
+      - MYSQL_DATABASE=${DB_NAME}
+      - TZ=Asia/Shanghai
+    command: ['mysqld', '--character-set-server=utf8mb4', '--collation-server=utf8mb4_unicode_ci']
+    networks:
+      - db_network
+  nginx:
+    container_name: 'nginx'
+    restart: always
+    image: nginx:latest
+    ports:
+      - "8000:80"
+    volumes:
+      - static-volume:/code/static
+      - template-volume:/code/templates
+      - ./config/nginx:/etc/nginx/conf.d
+    depends_on:
+      - app
+    networks:
+      - web_network
+
+networks:
+  web_network:
+    driver: bridge
+  db_network:
+    driver: bridge
+
+volumes:
+  static-volume:
+  template-volume:
