@@ -1,12 +1,13 @@
 version: "3"
 services:
   app:
-    restart: always
     container_name: 'app'
+    restart: always
     build: .
     command: >
       bash -c
-      "python3 manage.py database migrate &&
+      "python3 manage.py database init &&
+       python3 manage.py database migrate &&
        python3 manage.py database upgrade &&
        gunicorn -w4 -b 0.0.0.0:5000 --log-level=debug --access-logfile error.log manage:app"
     volumes:
@@ -20,11 +21,11 @@ services:
       - web_network
       - db_network
   db:
-    image: mysql:5.7
     container_name: 'mysql'
+    image: mysql:5.7
     volumes:
-      - "./mysql:/var/lib/mysql"
-    #      - "/home/ubuntu/mysql:/var/lib/mysql"
+       - "./mysql:/var/lib/mysql"
+         #      - "/home/ubuntu/mysql:/var/lib/mysql"
     env_file: .env
     expose:
       - "3306"
@@ -37,9 +38,9 @@ services:
     networks:
       - db_network
   nginx:
-    image: nginx:latest
     container_name: 'nginx'
     restart: always
+    image: nginx:latest
     ports:
       - "8000:80"
     volumes:

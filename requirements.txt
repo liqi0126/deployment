@@ -7,4 +7,5 @@ flask_script
 flask_migrate
 python-dotenv
 pyyaml
-gunicorn
+mysqlclient==1.3.14
+gunicorn==19.9.0

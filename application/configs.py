@@ -13,7 +13,7 @@ class Config(object):
     # Flask config
     SECRET_KEY = config.get_yaml('app.SECRET', '')
     HOST = config.get_yaml('app.HOST', '127.0.0.1')
-    PORT = config.get_yaml('app.POST', 8080)
+    PORT = config.get_yaml('app.POST', 8000)
     ENV = config.get_yaml('app.ENV', 'dev')
     SALT = config.get_yaml('app.SALT', '')
 
