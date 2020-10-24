@@ -6,13 +6,13 @@ services:
     build: .
     command: >
       bash -c
-      "python3 manage.py database init &&
-       python3 manage.py database migrate &&
+      "python3 manage.py database migrate &&
        python3 manage.py database upgrade &&
        gunicorn -w4 -b 0.0.0.0:5000 --log-level=debug --access-logfile error.log manage:app"
     volumes:
       - .:/code
-      - static-volume:/code/static
+      - static-volume:/code/application/static
+      - appl-volume:/code/application/applications
     expose:
       - "5000"
     depends_on:
@@ -24,8 +24,7 @@ services:
     container_name: 'mysql'
     image: mysql:5.7
     volumes:
-       - "./mysql:/var/lib/mysql"
-         #      - "/home/ubuntu/mysql:/var/lib/mysql"
+       - "/home/ubuntu/mysql:/var/lib/mysql"
     env_file: .env
     expose:
       - "3306"
@@ -45,6 +44,7 @@ services:
       - "8000:80"
     volumes:
       - static-volume:/code/static
+      - appl-volume:/code/applications
       - ./config/nginx:/etc/nginx/conf.d
     depends_on:
       - app
@@ -59,3 +59,4 @@ networks:
 
 volumes:
   static-volume:
+  appl-volume:
