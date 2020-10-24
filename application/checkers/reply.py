@@ -1,9 +1,7 @@
 # -*- coding: utf-8 -*-
-
 def reply_post_params_check(content):
-    """
-    TODO: 回帖参数检查
-    """
+    if type(content) is not dict:
+        return 'content', False
 
     reply_content = content.get('content', None)
 

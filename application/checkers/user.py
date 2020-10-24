@@ -1,8 +1,6 @@
 # -*- coding: utf-8 -*-
-
 import re
 import datetime
-
 
 ID_weight_table = [7, 9, 10, 5, 8, 4, 2, 1, 6, 3, 7, 9, 10, 5, 8, 4, 2, 1]
 ID_check_table = {
@@ -21,9 +19,8 @@ ID_check_table = {
 
 
 def register_params_check(content):
-    """
-    TODO: 注册信息检查
-    """
+    if type(content) is not dict:
+        return 'username', False
 
     # username
     username = content.get('username', None)
@@ -65,8 +62,6 @@ def register_params_check(content):
         return 'nickname', False
 
     # document_number
-
-    # TODO:
     document_number = content.get('document_number', None)
 
     if type(document_number) is not str:
@@ -83,7 +78,7 @@ def register_params_check(content):
     birthday_code = document_number[6:14]
 
     if re.search(r'[^0-9]+', birthday_code):
-        return document_number, False
+        return 'document_number', False
 
     year = int(birthday_code[:4])
     month = int(birthday_code[4:6])
@@ -94,9 +89,9 @@ def register_params_check(content):
         return 'document_number', False
 
     if month == 2 and day == 29:
-        after18time = datetime.datetime(year=year+18, month=3, day=1)
+        after18time = datetime.datetime(year=year + 18, month=3, day=1)
     else:
-        after18time = datetime.datetime(year=year+18, month=month, day=day)
+        after18time = datetime.datetime(year=year + 18, month=month, day=day)
     now = datetime.datetime.now()
 
     if now < after18time:
@@ -105,7 +100,7 @@ def register_params_check(content):
     order_code = document_number[14:17]
 
     if re.search(r'[^0-9]+', order_code):
-        return document_number, False
+        return 'document_number', False
 
     check_code = document_number[17]
     sum = 0
@@ -113,7 +108,6 @@ def register_params_check(content):
         sum += int(code) * ID_weight_table[code_id]
     if check_code != ID_check_table[sum % 11]:
         return 'document_number', False
-
 
     # mobile
     mobile = content.get('mobile', None)
@@ -153,6 +147,9 @@ def register_params_check(content):
     hosts = hosts.split('.')
 
     for host_idx, host in enumerate(hosts):
+        if len(host) <= 0:
+            return 'email', False
+
         if host[0] == '-':
             return 'email', False
 
@@ -167,21 +164,3 @@ def register_params_check(content):
                 return 'email', False
 
     return "ok", True
-
-
-def main():
-    import datetime
-
-    year = 2020
-    month = 2
-    day = 30
-    birthtime = datetime.datetime(year=year, month=month, day=day)
-    if month == 2 and day == 29:
-        after18time = datetime.datetime(year=year+18, month=3, day=1)
-    else:
-        after18time = datetime.datetime(year=year+18, month=month, day=day)
-    now = datetime.datetime.now()
-    print(now > after18time)
-
-if __name__ == '__main__':
-    main()
