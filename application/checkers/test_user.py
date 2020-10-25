@@ -150,7 +150,7 @@ class UserCheckTest(unittest.TestCase):
         case['document_number'] = '1402021999012640X4'
         self.assertEqual(register_params_check(case), ('document_number', False))
 
-    def test_document_number(self):
+    def test_document_number_02_29(self):
         case = self.base_case()
         case['document_number'] = '140202199902294032'
         self.assertEqual(register_params_check(case), ('document_number', False))
