@@ -25,7 +25,4 @@ def create_app(config_name=None):
     for bp in blueprints:
         app.register_blueprint(bp)
 
-    db.init_app(app)
-    db.create_all()
-
     return app
