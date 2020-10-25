@@ -10,7 +10,6 @@ services:
     volumes:
       - .:/code
       - static-volume:/code/application/static
-      - template-volume:/code/application/templates
     expose:
       - "5000"
     depends_on:
@@ -43,7 +42,6 @@ services:
       - "8000:80"
     volumes:
       - static-volume:/code/static
-      - template-volume:/code/templates
       - ./config/nginx:/etc/nginx/conf.d
     depends_on:
       - app
@@ -58,4 +56,3 @@ networks:
 
 volumes:
   static-volume:
-  template-volume:
