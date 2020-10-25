@@ -1,4 +1,4 @@
-create schema thss collate utf8_general_ci;
+# create schema thss collate utf8_general_ci;
 
 use thss;
 
