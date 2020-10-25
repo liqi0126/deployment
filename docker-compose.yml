@@ -22,7 +22,8 @@ services:
     container_name: 'mysql'
     image: mysql:5.7
     volumes:
-       - "/home/ubuntu/mysql:/var/lib/mysql"
+      - ./db:/docker-entrypoint-initdb.d/:ro
+      - /home/ubuntu/mysql:/var/lib/mysql
     env_file: .env
     expose:
       - "3306"
